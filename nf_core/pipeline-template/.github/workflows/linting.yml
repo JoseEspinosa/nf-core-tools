@@ -66,7 +66,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install yamllint
-        run: pip install yamllint
+        run: pip install yamllint==1.25.0
       - name: Run yamllint
         run: yamllint $(find ${GITHUB_WORKSPACE} -type f -name "*.yml" -o -name "*.yaml") -c ${GITHUB_WORKSPACE}/.yamllint.yml
 
